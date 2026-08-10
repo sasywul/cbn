@@ -77,7 +77,7 @@ const Register: React.FC = () => {
       whatsappPhone = '62' + whatsappPhone;
     }
 
-    const waText = `Hallo kak saya dari CBN ingin mengkonfirmasi bahwa\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo. Telepon: ${formData.phone}\nPaket Pilihan: ${formData.package}\nAlamat Pemasangan: ${formData.address}, Kel. ${formData.village}, Kec. ${formData.district}, ${formData.city}\n\napakah sudah benar?\nJika sudah benar saya lampirkan QRIS untuk pembayaran awal`;
+    const waText = `Hallo kak saya dari CBN, selamat lokasi kakak tercover jaringan kami!\n\nIngin mengkonfirmasi data pendaftaran berikut:\nNama: ${formData.name}\nEmail: ${formData.email}\nNo. Telepon: ${formData.phone}\nPaket Pilihan: ${formData.package}\nAlamat Pemasangan: ${formData.address}, Kel. ${formData.village}, Kec. ${formData.district}, ${formData.city}\n\nApakah sudah benar?\nJika sudah benar saya lampirkan QRIS untuk pembayaran awal`;
     const waLink = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(waText)}`;
 
     const message = `
