@@ -1,262 +1,241 @@
 .promoContainer {
-  padding: 4rem 1.5rem;
+  padding: 5rem 1.5rem;
   font-family: 'Inter', sans-serif;
-  overflow: hidden;
   position: relative;
-  color: #1f2937;
-}
-
-.glowBackground {
-  display: none;
+  background-color: #ffffff;
 }
 
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto 4rem auto;
-  position: relative;
-  z-index: 2;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto 5rem auto;
+  align-items: stretch;
 }
 
 .priceCard {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: white;
-  border-radius: 1rem;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3.5rem 2.5rem;
+  border: 2px solid #e2e8f0;
+  transition: all 0.5s ease;
 }
 
 .priceCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
 }
 
-.cardBlue {
-  border: 2px solid #00d2ff;
+.popularCard {
+  border-color: #0f172a;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
 }
 
-.cardGreen {
-  border: 2px solid #54d047;
+.popularCard:hover {
+  border-color: #0f172a;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
-.cardOrange {
-  border: 2px solid #ff9d00;
+.popularBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.4rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .speedSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
 }
 
-.speedIcon {
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+.iconWrapper {
+  color: #64748b;
+  transition: color 0.3s ease;
 }
-.cardBlue .speedIcon { color: #00d2ff; }
-.cardGreen .speedIcon { color: #54d047; }
-.cardOrange .speedIcon { color: #ff9d00; }
+
+.priceCard:hover .iconWrapper {
+  color: #0f172a;
+}
 
 .speedValue {
-  font-size: 3.5rem;
-  font-weight: 900;
+  font-size: 4.5rem;
+  font-weight: 300;
   line-height: 1;
-  font-style: italic;
+  letter-spacing: -2px;
   display: flex;
-  align-items: baseline;
-  color: #111827;
+  align-items: flex-end;
+  justify-content: center;
+  color: #0f172a;
 }
 
 .speedUnit {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.125rem;
+  font-weight: 400;
   margin-left: 0.25rem;
-  font-style: normal;
+  margin-bottom: 0.75rem;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: #cbd5e1;
+  margin: 0 auto 2.5rem auto;
 }
 
 .priceSection {
-  text-align: right;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .priceLabel {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
 .priceValue {
-  font-size: 3rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 400;
   line-height: 1;
+  letter-spacing: -1px;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
 }
 
 .priceUnit {
-  background: #f3f4f6;
-  color: #374151;
-  font-weight: 800;
-  padding: 0.25rem 1rem;
-  border-radius: 1rem;
   font-size: 1rem;
-  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .selectBtn {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 2rem;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: white;
-  transition: all 0.2s ease;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
   cursor: pointer;
   width: 100%;
+  text-transform: uppercase;
 }
 
-.btnBlue { background: #00d2ff; }
-.btnBlue:hover { background: #00b8e6; }
+/* Outlined buttons for standard cards */
+.btnStandard { 
+  background: transparent;
+  color: #0f172a;
+  border: 2px solid #cbd5e1;
+}
+.btnStandard:hover { 
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
 
-.btnGreen { background: #54d047; }
-.btnGreen:hover { background: #4ac03e; }
+/* Filled button for popular card */
+.btnPopular { 
+  background: #0f172a;
+  color: #ffffff;
+  border: 2px solid #0f172a;
+}
+.btnPopular:hover { 
+  background: #1e293b;
+  border-color: #1e293b;
+  box-shadow: 0 10px 20px -10px rgba(15, 23, 42, 0.4);
+}
 
-.btnOrange { background: #ff9d00; }
-.btnOrange:hover { background: #e68d00; }
+.arrowIcon {
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+.priceCard:hover .arrowIcon {
+  transform: translateX(4px);
+  opacity: 1;
+}
 
-/* Colors for specific text */
-.textBlue { color: #0096c7; }
-.textGreen { color: #4ac03e; }
-.textOrange { color: #ff9d00; }
-
+/* Features Grid - Minimalist */
 .featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
-  position: relative;
-  z-index: 2;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 4rem;
 }
 
 .featureItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.25rem;
 }
 
 .featureIconBox {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(0, 119, 200, 0.05);
-  border: 1px solid rgba(0, 119, 200, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0077c8;
+  color: #94a3b8;
+  transition: color 0.3s ease;
+}
+.featureItem:hover .featureIconBox {
+  color: #0f172a;
 }
 
 .featureText {
   font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #4b5563;
+  font-weight: 400;
+  color: #475569;
+  letter-spacing: 1px;
 }
 
-.footerBanner {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 2rem;
-  padding: 1rem 2rem;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  position: relative;
-  z-index: 2;
-}
-
-.footerBrand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #0077c8;
-}
-
-.footerDivider {
-  width: 1px;
-  height: 30px;
-  background: #cbd5e1;
-}
-
-.footerText {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #4b5563;
-}
-
-.highlight {
-  color: #0077c8;
-  font-weight: 800;
-}
-
-@media (max-width: 900px) {
-  .cardsContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (max-width: 1024px) {
+  .cardsContainer { gap: 1.5rem; padding: 0 1rem; }
+  .priceCard { padding: 2.5rem 1.5rem; }
+  .speedValue { font-size: 3.5rem; }
+  .priceValue { font-size: 2rem; }
+  .featuresGrid { gap: 2rem; flex-wrap: wrap; }
 }
 
 @media (max-width: 768px) {
   .cardsContainer {
     grid-template-columns: 1fr;
     max-width: 400px;
+    gap: 2rem;
   }
   
-  .priceCard {
-    padding: 2rem 1.5rem;
-  }
-  
-  .speedValue { font-size: 3rem; }
-  .speedUnit { font-size: 1.25rem; }
-  .priceValue { font-size: 3rem; }
-  
-  .featuresGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 1rem;
-  }
-  
-  .footerBanner {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
-    border-radius: 1rem;
-  }
-  
-  .footerDivider {
-    width: 100px;
-    height: 1px;
+  .popularCard {
+    border-color: #e2e8f0;
   }
 }

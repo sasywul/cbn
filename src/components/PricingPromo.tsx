@@ -11,54 +11,76 @@ const PricingPromo: React.FC = () => {
       <div className={styles.cardsContainer}>
         {/* 100 Mbps Card */}
         <Link to="/register?paket=100Mbps/100%20Ribu" style={{ textDecoration: 'none' }}>
-          <div className={`${styles.priceCard} ${styles.cardBlue}`}>
+          <div className={styles.priceCard}>
             <div className={styles.speedSection}>
-              <Gauge size={48} className={styles.speedIcon} />
+              <div className={styles.iconWrapper}>
+                <Gauge size={32} strokeWidth={1.5} />
+              </div>
               <div className={styles.speedValue}>
                 100<span className={styles.speedUnit}>Mbps</span>
               </div>
             </div>
+            
+            <div className={styles.divider}></div>
+
             <div className={styles.priceSection}>
-              <span className={styles.priceLabel}>HANYA</span>
-              <span className={`${styles.priceValue} ${styles.textBlue}`}>100</span>
-              <span className={styles.priceUnit}>RIBU</span>
-              <div className={`${styles.selectBtn} ${styles.btnBlue}`}>Pilih Paket <ChevronRight size={16}/></div>
+              <span className={styles.priceLabel}>Hanya</span>
+              <span className={styles.priceValue}>100</span>
+              <span className={styles.priceUnit}>Ribu</span>
+              <div className={`${styles.selectBtn} ${styles.btnStandard}`}>
+                Pilih Paket <ChevronRight size={16} className={styles.arrowIcon}/>
+              </div>
             </div>
           </div>
         </Link>
 
-        {/* 200 Mbps Card */}
+        {/* 200 Mbps Card (BEST SELLER) */}
         <Link to="/register?paket=200Mbps/180%20Ribu" style={{ textDecoration: 'none' }}>
-          <div className={`${styles.priceCard} ${styles.cardGreen}`}>
+          <div className={`${styles.priceCard} ${styles.popularCard}`}>
+            <div className={styles.popularBadge}>Best Seller</div>
             <div className={styles.speedSection}>
-              <Gauge size={48} className={styles.speedIcon} />
+              <div className={styles.iconWrapper}>
+                <Activity size={32} strokeWidth={1.5} />
+              </div>
               <div className={styles.speedValue}>
                 200<span className={styles.speedUnit}>Mbps</span>
               </div>
             </div>
+            
+            <div className={styles.divider}></div>
+
             <div className={styles.priceSection}>
-              <span className={styles.priceLabel}>HANYA</span>
-              <span className={`${styles.priceValue} ${styles.textGreen}`}>180</span>
-              <span className={styles.priceUnit}>RIBU</span>
-              <div className={`${styles.selectBtn} ${styles.btnGreen}`}>Pilih Paket <ChevronRight size={16}/></div>
+              <span className={styles.priceLabel}>Hanya</span>
+              <span className={styles.priceValue}>180</span>
+              <span className={styles.priceUnit}>Ribu</span>
+              <div className={`${styles.selectBtn} ${styles.btnPopular}`}>
+                Pilih Paket <ChevronRight size={16} className={styles.arrowIcon}/>
+              </div>
             </div>
           </div>
         </Link>
 
         {/* 500 Mbps Card */}
         <Link to="/register?paket=500Mbps/300%20Ribu" style={{ textDecoration: 'none' }}>
-          <div className={`${styles.priceCard} ${styles.cardOrange}`}>
+          <div className={styles.priceCard}>
             <div className={styles.speedSection}>
-              <Gauge size={48} className={styles.speedIcon} />
+              <div className={styles.iconWrapper}>
+                <ShieldCheck size={32} strokeWidth={1.5} />
+              </div>
               <div className={styles.speedValue}>
                 500<span className={styles.speedUnit}>Mbps</span>
               </div>
             </div>
+            
+            <div className={styles.divider}></div>
+
             <div className={styles.priceSection}>
-              <span className={styles.priceLabel}>HANYA</span>
-              <span className={`${styles.priceValue} ${styles.textOrange}`}>300</span>
-              <span className={styles.priceUnit}>RIBU</span>
-              <div className={`${styles.selectBtn} ${styles.btnOrange}`}>Pilih Paket <ChevronRight size={16}/></div>
+              <span className={styles.priceLabel}>Hanya</span>
+              <span className={styles.priceValue}>300</span>
+              <span className={styles.priceUnit}>Ribu</span>
+              <div className={`${styles.selectBtn} ${styles.btnStandard}`}>
+                Pilih Paket <ChevronRight size={16} className={styles.arrowIcon}/>
+              </div>
             </div>
           </div>
         </Link>
@@ -67,27 +89,27 @@ const PricingPromo: React.FC = () => {
       <div className={styles.featuresGrid}>
         <div className={styles.featureItem}>
           <div className={styles.featureIconBox}>
-            <Activity size={32} />
+            <Activity size={24} strokeWidth={1.5} />
           </div>
-          <div className={styles.featureText}>KECEPATAN<br/>STABIL</div>
+          <div className={styles.featureText}>Kecepatan Stabil</div>
         </div>
         <div className={styles.featureItem}>
           <div className={styles.featureIconBox}>
-            <Wifi size={32} />
+            <Wifi size={24} strokeWidth={1.5} />
           </div>
-          <div className={styles.featureText}>KONEKSI<br/>HANDAL</div>
+          <div className={styles.featureText}>Koneksi Handal</div>
         </div>
         <div className={styles.featureItem}>
           <div className={styles.featureIconBox}>
-            <ShieldCheck size={32} />
+            <ShieldCheck size={24} strokeWidth={1.5} />
           </div>
-          <div className={styles.featureText}>AMAN &<br/>TERPERCAYA</div>
+          <div className={styles.featureText}>Aman & Terpercaya</div>
         </div>
         <div className={styles.featureItem}>
           <div className={styles.featureIconBox}>
-            <Headphones size={32} />
+            <Headphones size={24} strokeWidth={1.5} />
           </div>
-          <div className={styles.featureText}>SUPPORT<br/>24/7</div>
+          <div className={styles.featureText}>Support 24/7</div>
         </div>
       </div>
 
