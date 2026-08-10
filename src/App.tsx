@@ -4,6 +4,7 @@ import FloatingChat from './components/FloatingChat';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Register from './pages/Register';
+import Success from './pages/Success';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/success" element={<Success />} />
           </Routes>
         </main>
         

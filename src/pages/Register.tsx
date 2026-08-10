@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Send, Loader2 } from 'lucide-react';
 import styles from './Register.module.css';
 
 const Register: React.FC = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -77,17 +79,7 @@ ${formData.address}
 
     try {
       await sendToTelegram(message);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        city: '',
-        district: '',
-        village: '',
-        package: '100mbps/100 Ribu',
-      });
+      navigate('/success');
     } catch (error: any) {
       console.error('Telegram API Error:', error);
       setSubmitStatus('error');
@@ -104,12 +96,6 @@ ${formData.address}
           <h2>Daftar Layanan CBN Fiber</h2>
           <p>Silakan lengkapi formulir di bawah ini, tim kami akan segera menghubungi Anda.</p>
         </div>
-
-        {submitStatus === 'success' && (
-          <div className={styles.alertSuccess}>
-            Pendaftaran berhasil dikirim! Tim kami akan segera menghubungi Anda melalui nomor telepon yang terdaftar.
-          </div>
-        )}
 
         {submitStatus === 'error' && (
           <div className={styles.alertError}>

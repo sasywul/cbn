@@ -21,7 +21,7 @@ const Home: React.FC = () => {
             <img 
               src="https://storage.cybiteam.id/assets.cbn.id/Website_KV_Fiber_Safe_3840x1000px_IND_edcb3edff2.webp" 
               alt="Fiber HOME" 
-              style={{ width: '100%', borderRadius: '1rem', objectFit: 'cover' }} 
+              style={{ width: '100%', aspectRatio: '16/9', borderRadius: '1rem', objectFit: 'cover', objectPosition: 'center' }} 
             />
             <h3 style={{ fontSize: '2rem', fontWeight: 800, margin: '1.5rem 0 0.5rem 0', color: '#0077c8' }}>Fiber HOME</h3>
             <p style={{ color: 'var(--text-gray)', marginBottom: '1.5rem' }}>Koneksi internet dan WiFi rumah super cepat yang unlimited</p>
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
             <img 
               src="https://storage.cybiteam.id/assets.cbn.id/CBN_Fiber_Promo_85_Trend_Micro_web_ID_dda26909ce.webp" 
               alt="Fiber PRO" 
-              style={{ width: '100%', borderRadius: '1rem', objectFit: 'cover' }} 
+              style={{ width: '100%', aspectRatio: '16/9', borderRadius: '1rem', objectFit: 'cover', objectPosition: 'center' }} 
             />
             <h3 style={{ fontSize: '2rem', fontWeight: 800, margin: '1.5rem 0 0.5rem 0', color: '#0077c8' }}>Fiber PRO</h3>
             <p style={{ color: 'var(--text-gray)', marginBottom: '1.5rem' }}>Transformasi bisnis menjadi lebih fleksibel dan menguntungkan</p>
