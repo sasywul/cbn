@@ -1,0 +1,132 @@
+.footer {
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .footerContent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footerBrand {
+  flex: 1;
+  max-width: 400px;
+}
+
+.logo {
+  margin-bottom: 1rem;
+}
+
+.logoText {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+.logoDot {
+  color: var(--text-dark);
+}
+
+.brandDesc {
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+
+.socialBtn:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footerLinksGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .footerLinksGroup {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.linkTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkList a {
+  color: var(--text-gray);
+  transition: color 0.2s;
+}
+
+.linkList a:hover {
+  color: var(--primary);
+}
+
+.footerBottom {
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  background-color: white;
+}
+
+.bottomContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .bottomContent {
+    justify-content: space-between;
+    text-align: left;
+  }
+}

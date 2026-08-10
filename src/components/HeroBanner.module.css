@@ -1,0 +1,31 @@
+.heroContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f8fafc;
+}
+
+.bannerImageDesktop {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bannerImageMobile {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .bannerImageMobile {
+    display: none;
+  }
+  .bannerImageDesktop {
+    display: block;
+  }
+}
