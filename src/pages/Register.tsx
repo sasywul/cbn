@@ -70,6 +70,16 @@ const Register: React.FC = () => {
     setSubmitStatus('idle');
     setErrorMessage('');
 
+    let whatsappPhone = formData.phone.trim();
+    if (whatsappPhone.startsWith('0')) {
+      whatsappPhone = '62' + whatsappPhone.substring(1);
+    } else if (whatsappPhone.startsWith('+')) {
+      whatsappPhone = whatsappPhone.substring(1);
+    }
+
+    const waText = `Hallo kak saya dari CBN ingin mengkonfirmasi bahwa\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo. Telepon: ${formData.phone}\nPaket Pilihan: ${formData.package}\nAlamat Pemasangan: ${formData.address}, Kel. ${formData.village}, Kec. ${formData.district}, ${formData.city}\n\napakah sudah benar?\nJika sudah benar saya lampirkan QRIS untuk pembayaran awal`;
+    const waLink = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(waText)}`;
+
     const message = `
 <b>🔔 Pendaftaran Baru CBN</b>
 
@@ -83,6 +93,9 @@ ${formData.address}
 <b>Kota/Kabupaten:</b> ${formData.city}
 <b>Kecamatan:</b> ${formData.district}
 <b>Kelurahan:</b> ${formData.village}
+
+<b>Tindakan:</b>
+<a href="${waLink}">💬 Chat WhatsApp Pelanggan</a>
     `;
 
     try {
