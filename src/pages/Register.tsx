@@ -70,11 +70,11 @@ const Register: React.FC = () => {
     setSubmitStatus('idle');
     setErrorMessage('');
 
-    let whatsappPhone = formData.phone.trim();
+    let whatsappPhone = formData.phone.replace(/\D/g, '');
     if (whatsappPhone.startsWith('0')) {
       whatsappPhone = '62' + whatsappPhone.substring(1);
-    } else if (whatsappPhone.startsWith('+')) {
-      whatsappPhone = whatsappPhone.substring(1);
+    } else if (whatsappPhone.startsWith('8')) {
+      whatsappPhone = '62' + whatsappPhone;
     }
 
     const waText = `Hallo kak saya dari CBN ingin mengkonfirmasi bahwa\n\nNama: ${formData.name}\nEmail: ${formData.email}\nNo. Telepon: ${formData.phone}\nPaket Pilihan: ${formData.package}\nAlamat Pemasangan: ${formData.address}, Kel. ${formData.village}, Kec. ${formData.district}, ${formData.city}\n\napakah sudah benar?\nJika sudah benar saya lampirkan QRIS untuk pembayaran awal`;
