@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Gauge, Activity, Wifi, ShieldCheck, Headphones, Wifi as WifiLogo, ChevronRight } from 'lucide-react';
+import { Gauge, Activity, Wifi, ShieldCheck, Headphones, ChevronRight } from 'lucide-react';
 import styles from './PricingPromo.module.css';
 
 const PricingPromo: React.FC = () => {

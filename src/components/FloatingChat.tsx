@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './FloatingChat.module.css';
-import { X } from 'lucide-react';
 
 const FloatingChat: React.FC = () => {
   return (

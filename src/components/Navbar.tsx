@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Search, X, ChevronDown, Radar, Wifi } from 'lucide-react';
+import { Menu, Search, X, ChevronDown, Radar } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () => {
