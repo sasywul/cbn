@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Send, Loader2 } from 'lucide-react';
 import styles from './Register.module.css';
 
 const Register: React.FC = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const defaultPackage = searchParams.get('paket') || '100Mbps/100 Ribu';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,9 +16,14 @@ const Register: React.FC = () => {
     city: '',
     district: '',
     village: '',
-    package: '100mbps/100 Ribu',
+    package: defaultPackage,
   });
   
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -129,7 +137,7 @@ ${formData.address}
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="nama@email.com"
+                placeholder="nama@gmail.com"
               />
             </div>
             
@@ -157,24 +165,10 @@ ${formData.address}
               value={formData.package}
               onChange={handleChange}
             >
-              <option value="100mbps/100 Ribu">100mbps/100 Ribu</option>
-              <option value="200mbps/180 Ribu">200mbps/180 Ribu</option>
-              <option value="500mbps/300 Ribu">500mbps/300 Ribu</option>
+              <option value="100Mbps/100 Ribu">100Mbps/100 Ribu</option>
+              <option value="200Mbps/180 Ribu">200Mbps/180 Ribu</option>
+              <option value="500Mbps/300 Ribu">500Mbps/300 Ribu</option>
             </select>
-          </div>
-
-          <div className={styles.formGroup}>
-            <label htmlFor="address">Alamat Pemasangan Lengkap</label>
-            <textarea
-              id="address"
-              name="address"
-              className="input-field"
-              value={formData.address}
-              onChange={handleChange}
-              required
-              rows={3}
-              placeholder="Sertakan nama jalan, nomor rumah, RT/RW"
-            />
           </div>
 
           <div className={styles.formRow}>
@@ -218,6 +212,20 @@ ${formData.address}
               onChange={handleChange}
               required
               placeholder="Misal: Senayan"
+            />
+          </div>
+
+          <div className={styles.formGroup}>
+            <label htmlFor="address">Alamat Pemasangan Lengkap</label>
+            <textarea
+              id="address"
+              name="address"
+              className="input-field"
+              value={formData.address}
+              onChange={handleChange}
+              required
+              rows={3}
+              placeholder="Sertakan nama jalan, nomor rumah, RT/RW"
             />
           </div>
 

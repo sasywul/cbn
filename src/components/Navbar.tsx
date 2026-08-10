@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Search, X, ChevronDown, Radar } from 'lucide-react';
+import { Menu, Search, X, ChevronDown, Radar, Wifi } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () => {
@@ -14,8 +14,8 @@ const Navbar: React.FC = () => {
             className={styles.mobileMenuIcon} 
             onClick={() => setIsMobileMenuOpen(true)}
           />
-          <Link to="/" className={styles.logo}>
-            <img src="https://storage.cybiteam.id/assets.cbn.id/logo_cbn_401c3be7af.png" alt="CBN Logo" height="40" style={{ maxHeight: '46px' }} />
+          <Link to="/" className={styles.logo} style={{ display: 'flex', alignItems: 'center' }}>
+            <img src="https://storage.cybiteam.id/assets.cbn.id/CBN_logo_03_cf08aa390e.png" alt="CBN Logo" style={{ height: '40px', objectFit: 'contain' }} />
           </Link>
         </div>
         
@@ -51,8 +51,8 @@ const Navbar: React.FC = () => {
           <div className={styles.mobileOverlay} onClick={() => setIsMobileMenuOpen(false)} />
           <div className={styles.mobileMenu}>
             <div className={styles.mobileMenuHeader}>
-              <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className={styles.logo}>
-                <img src="https://storage.cybiteam.id/assets.cbn.id/logo_cbn_401c3be7af.png" alt="CBN Logo" height="40" style={{ maxHeight: '46px' }} />
+              <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className={styles.logo} style={{ display: 'flex', alignItems: 'center' }}>
+                <img src="https://storage.cybiteam.id/assets.cbn.id/CBN_logo_03_cf08aa390e.png" alt="CBN Logo" style={{ height: '40px', objectFit: 'contain' }} />
               </Link>
               <button onClick={() => setIsMobileMenuOpen(false)} className={styles.iconBtn}>
                 <X size={24} />

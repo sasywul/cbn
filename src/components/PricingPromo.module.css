@@ -1,0 +1,262 @@
+.promoContainer {
+  padding: 4rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  position: relative;
+  color: #1f2937;
+}
+
+.glowBackground {
+  display: none;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+.priceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.priceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.cardBlue {
+  border: 2px solid #00d2ff;
+}
+
+.cardGreen {
+  border: 2px solid #54d047;
+}
+
+.cardOrange {
+  border: 2px solid #ff9d00;
+}
+
+.speedSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.speedIcon {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+.cardBlue .speedIcon { color: #00d2ff; }
+.cardGreen .speedIcon { color: #54d047; }
+.cardOrange .speedIcon { color: #ff9d00; }
+
+.speedValue {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  font-style: italic;
+  display: flex;
+  align-items: baseline;
+  color: #111827;
+}
+
+.speedUnit {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 0.25rem;
+  font-style: normal;
+}
+
+.priceSection {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.priceLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.priceValue {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.priceUnit {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 800;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.selectBtn {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btnBlue { background: #00d2ff; }
+.btnBlue:hover { background: #00b8e6; }
+
+.btnGreen { background: #54d047; }
+.btnGreen:hover { background: #4ac03e; }
+
+.btnOrange { background: #ff9d00; }
+.btnOrange:hover { background: #e68d00; }
+
+/* Colors for specific text */
+.textBlue { color: #0096c7; }
+.textGreen { color: #4ac03e; }
+.textOrange { color: #ff9d00; }
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.featureIconBox {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 119, 200, 0.05);
+  border: 1px solid rgba(0, 119, 200, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0077c8;
+}
+
+.featureText {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+.footerBanner {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0077c8;
+}
+
+.footerDivider {
+  width: 1px;
+  height: 30px;
+  background: #cbd5e1;
+}
+
+.footerText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.highlight {
+  color: #0077c8;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .priceCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .speedValue { font-size: 3rem; }
+  .speedUnit { font-size: 1.25rem; }
+  .priceValue { font-size: 3rem; }
+  
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+  
+  .footerBanner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+    border-radius: 1rem;
+  }
+  
+  .footerDivider {
+    width: 100px;
+    height: 1px;
+  }
+}
