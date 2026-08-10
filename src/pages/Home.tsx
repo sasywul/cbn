@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             />
             <h3 style={{ fontSize: '2rem', fontWeight: 800, margin: '1.5rem 0 0.5rem 0', color: '#0077c8' }}>Fiber HOME</h3>
             <p style={{ color: 'var(--text-gray)', marginBottom: '1.5rem' }}>Koneksi internet dan WiFi rumah super cepat yang unlimited</p>
-            <Link to="/register" className="btn btn-primary" style={{ padding: '0.75rem 2rem', borderRadius: '2rem', fontSize: '1rem' }}>
+            <Link to="/register" className="btn-promo" style={{ textDecoration: 'none' }}>
               Daftar Sekarang
             </Link>
           </div>
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             />
             <h3 style={{ fontSize: '2rem', fontWeight: 800, margin: '1.5rem 0 0.5rem 0', color: '#0077c8' }}>Fiber PRO</h3>
             <p style={{ color: 'var(--text-gray)', marginBottom: '1.5rem' }}>Transformasi bisnis menjadi lebih fleksibel dan menguntungkan</p>
-            <Link to="/register" className="btn btn-primary" style={{ padding: '0.75rem 2rem', borderRadius: '2rem', fontSize: '1rem' }}>
+            <Link to="/register" className="btn-promo" style={{ textDecoration: 'none' }}>
               Daftar Sekarang
             </Link>
           </div>
